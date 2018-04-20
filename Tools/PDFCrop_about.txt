@@ -1,0 +1,76 @@
+                      PDFCrop version 0.4b
+                      ====================
+
+             copyright 2011 -- Eric Doviak  <eric@doviak.net> 
+             copyright 2011 -- Tomas Janousek  <tomi@nomi.cz>
+
+What is PDFCrop?
+================
+
+PDFCrop is a Perl script that crops the white margins of PDF pages and rescales them to fit a standard size sheet of paper. It makes the printed pages far more attractive to read! 
+
+PDFCrop is particularly useful to academics who print downloaded journal articles and people who receive PDF documents designed for letter size paper, but need to print the pages on A4 paper (or vice versa). 
+
+For example, an academic may get a journal article in which the PDF pages are only 5in. x 7in. If the he/she prints the PDF file with a standard GNU/Linux PDF viewer on letter size paper (8.5in. x 11in), there will be 1.75in white margins on the left and right sides and 2in. white margins on the top and bottom. (In other words, the white margins will consume 63 percent of the square area on the page).
+
+International differences in paper size make PDFCrop indispensible. Letter size paper is the most common paper size in the United States, Canada and Mexico, while most other countries use A4 size paper. Consequently, Americans and Italians who exchange documents with each other may experience printing problems because letter size paper is 8.5in. x 11in, while A4 size paper is 8.27in x 11.7in.
+
+PDFCrop solves these problems by removing the white margins and rescaling the pages to fit the user's desired paper size. 
+
+
+How do I install PDFCrop?
+=========================
+
+PDFCrop depends on ghostscript and PDFedit. 
+
+Assuming that you have already installed these packages, then simply make sure the file "pdfcrop" is executable (i.e.: chmod 755 pdfcrop) and copy it to a directory in your $PATH. For example: /home/eric/.bin/pdfcrop  Alternatively, you could (as root) copy it to /usr/local/bin/pdfcrop 
+
+In future work, I'll create a nice DEB package, so that it can be incorporated into distributions of GNU/Linux.
+
+
+How do I use PDFCrop?
+=====================
+
+Open a console, cd to the directory where the PDF file is located and type: "pdfcrop infile.pdf letter outfile.pdf" 
+
+That command will resize and rescale the pages of "infile.pdf" so that they fit on letter size paper. The new PDF file will, of course, be called "output.pdf"
+
+
+What does PDFCrop do?
+=====================
+
+First, PDFCrop calls ghostscript to find the borders of the PDF's bounding box. Next, it determines the page orientation of each page of the PDF file. Finally, it calls PDFedit to crop and resize the pages.
+
+PDFCrop should preserve the input file's fonts, bookmarks and hyperlinks when generating the output file.
+
+
+Known issues
+============
+
+Occasionally, the resulting PDF file cannot be displayed, but this is easily fixed by filtering the file through pdfopt (a part of ghostscript).
+
+Older versions of ghostscript print the borders of the page bounding box twice, which will cause errors in the calculation of the page metrics and scale factor. 
+
+
+Why did you create PDFCrop?
+===========================
+
+I created PDFCrop because I hate small text and ugly white margins.
+
+
+Only four releases in 28 months? Why don't you spend more time working on PDFCrop?
+==================================================================================
+
+Because I'm an evil bastard who works for peanuts at a time-consuming day job.
+
+
+This script sucks! I could do a much better job!
+================================================ 
+
+Please do! I would be very happy if someone improved upon my work. That's why PDFCrop is distributed under the terms of Open Source licenses.
+
+Maybe one day PDFCrop (or its functionality) will be incorporated into Okular, Evince or PDFedit. Until then, you have this script.
+
+
+-- Eric Doviak (last updated:  02 March 2011)
+

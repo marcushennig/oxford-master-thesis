@@ -1,0 +1,39 @@
+{
+  "LimitOrderBook": {
+    "RecordTradingData": false,
+    "Time": 10000.509783106007,
+    "Ask": 21842,
+    "Bid": 21834,
+    "Counter": {
+      "CancelLimitBuyOrder": 15029,
+      "CancelLimitSellOrder": 14907,
+      "SubmitLimitBuyOrder": 19866,
+      "SubmitLimitSellOrder": 19819,
+      "SubmitMarketBuyOrder": 4638,
+      "SubmitMarketSellOrder": 4815
+    }
+  },
+  "Parameter": {
+    "Seed": 42,
+    "LowerQuantileProbability": 0.01,
+    "UpperQuantileProbability": 0.8,
+    "LowerQuantile": 1000.0,
+    "UpperQuantile": 6400.0,
+    "MinTradingTime": 0.0,
+    "MaxTradingTime": 0.0,
+    "LimitOrderRateDensity": 0.031951893033871089,
+    "MarketOrderRate": 0.46700230751572164,
+    "CancellationRate": 0.055978009643737663,
+    "SimulationIntervalSize": 52,
+    "PriceTickSize": 100.0,
+    "CharacteristicOrderSize": 86.914015178507654,
+    "CharacteristicNumberOfShares": 4.1713014672000384,
+    "CharacteristicPriceInterval": 7.3078973289731026,
+    "CharacteristicTime": 17.864157842773022,
+    "NondimensionalTickSize": 13.683826619120261,
+    "AsymptoticDepth": 0.57079366053247294,
+    "BidAskSpread": 7.3078973289731026,
+    "Resolution": 13.683826619120261,
+    "NondimensionalOrderSize": 20.836186466486243
+  }
+}

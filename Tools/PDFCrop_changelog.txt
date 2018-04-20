@@ -1,0 +1,45 @@
+PDFCrop Changelog and Known Issues
+==================================
+
+Changelog
+=========
+
+07 August 2011 -- version 0.4b
+
+* Squashed a bug which prevented the user from resizing to A4 paper. (Thanks to Ingo Hoft!)
+
+
+02 March 2011 -- version 0.4
+
+* Information on the MediaBox is now obtained from PDFedit, which eliminates the need to grep the PDF file.
+
+* Various code improvements.
+
+
+28 February 2011 -- version 0.3 
+
+* A substantial improvement over previous versions of PDFCrop.
+
+* Tomas Janousek wrote a PDFedit script which squashed many of the bugs in PDFCrop. By calling PDFedit to do the page cropping, the input file's fonts, bookmarks and hyperlinks should be preserved when the output file is generated.
+
+* Eric Doviak then completely rewrote PDFCrop to enhance Tomas' script. PDFCrop is now a Perl script that calculates the page dimensions and scale factor which would make a PDF page fit onto a standard size sheet of paper. It then uses Tomas' work as a template for a PDFedit script and calls PDFedit to run that script.
+
+
+17 February 2009 -- version 0.2
+
+* Mark Sherry brought this project back to life and made substantial improvements. He rewrote the script in Python, included support for command line options, included a check for the necessary commands and enabled support for PDF files that are over 10,000 pages long. 
+
+
+29 November 2007 -- version 0.1 
+
+* Eric Doviak wrote a Bash script that called mawk, ps2pdf, pdf2ps, poster and pdftk. 
+
+
+Known Issues 
+============
+
+02 March 2011 -- version 0.4 
+
+Occasionally, the resulting PDF file cannot be displayed, but this is easily fixed by filtering the file through pdfopt (a part of ghostscript).
+
+Older versions of ghostscript print the borders of the page bounding box twice, which will cause errors in the calculation of the page metrics and scale factor. 
